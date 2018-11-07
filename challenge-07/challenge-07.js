@@ -17,8 +17,7 @@ function addItem( value ) {
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
-var newArr = [ 'Ninja', [ 'a', 'b', 'c' ], { bola: 'azul' } ];
-arr.push( newArr );
+addItem( [ 'Ninja', [ 'a', 'b', 'c' ], { bola: 'azul' } ] );
 
 console.log( arr );
 
@@ -27,7 +26,7 @@ Mostre no console o segundo elemento desse último array, criado acima, com a
 frase:
 "O segundo elemento do segundo array é [ELEMENTO]."
 */
-console.log( 'O segundo elemento do segundo array é ' + newArr[1] + '.' );
+console.log( 'O segundo elemento do segundo array é ' + arr[5][1] + '.' );
 
 /*
 Mostre no console quantos itens tem o primeiro array criado, com a frase:
@@ -39,7 +38,7 @@ console.log( 'O primeiro array tem ' + arr.length + ' itens.' );
 Agora mostre no console quantos itens tem o segundo array criado, com a frase:
 "O segundo array tem [QUANTIDADE DE ITENS] itens."
 */
-console.log( 'O segundo array tem ' + newArr.length + ' itens.' );
+console.log( 'O segundo array tem ' + arr[5].length + ' itens.' );
 
 /*
 Utilizando a estrutura de repetição `while`, mostre no console todos os números
@@ -50,9 +49,7 @@ console.log( 'Números pares entre 10 e 20:' );
 var num = 10;
 
 while( num <= 20 ) {
-	if ( num % 2 === 0 ) {
-		console.log( num );
-	}
+	num % 2 === 0 ? console.log( num ) : '';
 	num++;
 }
 
@@ -64,9 +61,7 @@ console.log( 'Números ímpares entre 10 e 20:' );
 var num = 10;
 
 while( num <= 20 ) {
-	if ( num % 2 > 0 ) {
-		console.log( num );
-	}
+	num % 2 !== 0 ? console.log( num ) : '';
 	num++;
 }
 
@@ -79,15 +74,11 @@ Só vamos mudar o range:
 console.log( 'Números pares entre 100 e 120:' );
 
 for ( num = 100; num <= 120; num++ ) {
-	if ( num % 2 === 0 ) {
-		console.log( num );
-	}
+	num % 2 === 0 ? console.log( num ) : '';
 }
 
 console.log( 'Números ímpares entre 111 e 125:' );
 
 for ( num = 111; num <= 125; num++ ) {
-	if ( num % 2 > 0 ) {
-		console.log( num );
-	}
+	num % 2 !== 0 ? console.log( num ) : '';
 }
